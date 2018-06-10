@@ -1,0 +1,125 @@
+[
+  {
+    "model": "bookstore.book",
+    "pk": 1,
+    "fields": {
+      "title": "The Last Unicorn",
+      "ISBN": "9780451450524",
+      "author": [1],
+      "price": 32.05,
+      "image": "1.jpeg"
+    }
+  },
+  {
+    "model": "bookstore.book",
+    "pk": 2,
+    "fields": {
+      "title": "Three Comrades",
+      "ISBN": "9780449912423",
+      "author": [2],
+      "price": 270.80,
+      "image": "2.jpeg"
+    }
+  },
+  {
+    "model": "bookstore.book",
+    "pk": 3,
+    "fields": {
+      "title": "Der Graf von Monte Christo",
+      "ISBN": "9783896143129",
+      "author": [3],
+      "price": 250.01,
+      "image": "3.jpeg"
+    }
+  },
+  {
+    "model": "bookstore.book",
+    "pk": 4,
+    "fields": {
+      "title": "Python: Master the Art of Design Patterns",
+      "ISBN": "9781787125186",
+      "author": [4,5,6],
+      "price": 280.00,
+      "image": "4.jpeg"
+    }
+  },
+  {
+    "model": "bookstore.book",
+    "pk": 5,
+    "fields": {
+      "title": "Django: Visual QuickPro Guide",
+      "ISBN": "9780321643407",
+      "author": [7],
+      "price": 290.00,
+      "image": "5.jpeg"
+    }
+  },
+  {
+    "model": "bookstore.book",
+    "pk": 6,
+    "fields": {
+      "title": "The Godfather",
+      "ISBN": "9780451205766",
+      "author": [8],
+      "price": 232.31,
+      "image": "6.jpeg"
+    }
+  },
+
+  {
+    "model": "bookstore.author",
+    "pk": 1,
+    "fields": {
+      "fullname": "Peter S. Beagle"
+    }
+  },
+  {
+    "model": "bookstore.author",
+    "pk": 2,
+    "fields": {
+      "fullname": "Erich Maria Remarque"
+    }
+  },
+  {
+    "model": "bookstore.author",
+    "pk": 3,
+    "fields": {
+      "fullname": "Alexandre Dumas"
+    }
+  },
+  {
+    "model": "bookstore.author",
+    "pk": 4,
+    "fields": {
+      "fullname": "Dusty Phillips"
+    }
+  },
+  {
+    "model": "bookstore.author",
+    "pk": 5,
+    "fields": {
+      "fullname": "Chetan Giridhar"
+    }
+  },
+  {
+    "model": "bookstore.author",
+    "pk": 6,
+    "fields": {
+      "fullname": "Sakis Kasampalis"
+    }
+  },
+  {
+    "model": "bookstore.author",
+    "pk": 7,
+    "fields": {
+      "fullname": "Steven Holzner"
+    }
+  },
+  {
+    "model": "bookstore.author",
+    "pk": 8,
+    "fields": {
+      "fullname": "Mario Puzo"
+    }
+  }
+]
