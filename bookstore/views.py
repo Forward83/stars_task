@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import permission_required, user_passes_test
-from django.views.decorators.http import require_GET
 from .models import Book, Author, Logging, HttpRequest
-from .forms import BookForm, RequestForm
+from .forms import BookForm
 
 # Create your views here.
 
