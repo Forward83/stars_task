@@ -10,8 +10,14 @@ def user_in_staff(user):
     return user.is_superuser or user.is_staff
 
 
-def book_list(request):
-    books = Book.objects.all()
+def book_list(request, order=None):
+    print('Order:', order)
+    if order == 'desc':
+        books = Book.objects.all().order_by('-publish_date')
+    elif order == 'asc':
+        books = Book.objects.all().order_by('publish_date')
+    else:
+        books = Book.objects.all()
     return render(request, 'bookstore/home.html', {'books': books})
 
 

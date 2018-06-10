@@ -21,7 +21,9 @@ from stars_task import settings
 from . import views
 
 urlpatterns = [
+    # url(r'(^$|^(?P<order>(asc|desc))$)', views.book_list, name='book_list'),
     url(r'^$', views.book_list, name='book_list'),
+    url(r'^(?P<order>(asc|desc))$', views.book_list, name='book_list_sort'),
     url(r'^new_book/$', views.create_book, name='create_book'),
     url(r'^contact/(?P<pk>\d+)/$', views.edit_book, name='edit_book'),
     url(r'^view_logs/$', views.view_logs, name='view_logs'),
