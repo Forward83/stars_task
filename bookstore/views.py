@@ -1,10 +1,14 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import permission_required
+from django.contrib.auth.decorators import permission_required, user_passes_test
 from django.views.decorators.http import require_GET
-from .models import Book, Author, Logging
-from .forms import BookForm
+from .models import Book, Author, Logging, HttpRequest
+from .forms import BookForm, RequestForm
 
 # Create your views here.
+
+def user_in_staff(user):
+    return user.is_superuser or user.is_staff
+
 
 def book_list(request):
     books = Book.objects.all()
@@ -44,18 +48,17 @@ def edit_book(request, pk):
         form = BookForm(instance=book)
         return render(request, 'bookstore/book_form.html', {'form': form})
 
-def view_10_request():
-    pass
+
+@user_passes_test(user_in_staff)
+def view_10_request(request):
+    req_objects = HttpRequest.objects.all().order_by('-datetime')[:10]
+    fields = [f.name for f in HttpRequest._meta.get_fields() if f.name != 'id']
+    return render(request, 'bookstore/statistic.html', {'objects': req_objects, 'fields': fields, 'model': 'request'})
 
 
-# @require_GET
-# def show_book(request, pk):
-#     book = Book.objects.get(id=pk)
-#     book_form = BookForm(instance=book)
-#     book_form.is_valid()
-#     return render(request, 'bookstore/book_form.html')
-
-
+@user_passes_test(user_in_staff)
 def view_logs(request):
-    pass
+    log_objects = Logging.objects.all().order_by('-date')[:10]
+    fields = [f.name for f in Logging._meta.get_fields() if f.name != 'id']
+    return render(request, 'bookstore/statistic.html', {'objects': log_objects, 'fields': fields, 'model': 'logging'})
 

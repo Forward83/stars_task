@@ -11,7 +11,7 @@ def simple_middleware(get_response):
         elif request.method == "GET":
             request_info = request.GET
         request_obj = HttpRequest(request_path=request.path, request_method=request.method,
-                                  request_info=json.dumps(request_info), request_cookies=request.COOKIES)
+                                  request_info=json.dumps(request_info))
         request_obj.save()
         return response
 

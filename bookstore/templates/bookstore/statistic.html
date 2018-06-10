@@ -1,0 +1,39 @@
+{% extends "bookstore/base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row">
+                {% include "bookstore/sidebar.html" %}
+                 <div class="col-md-10 table-body" >
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                {% for field in fields %}
+                                <th scope="col">
+                                {{ field }}
+                                </th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        {% for object in objects %}
+                            <tr>
+                            {% if model == "request" %}
+                                <td> {{ object.request_path }} </td>
+                                <td> {{ object.request_method }}</td>
+                                <td> {{ object.request_info }} </td>
+                                <td> {{ object.datetime }}</td>
+                            {% else %}
+                                <td> {{ object.book.title }} </td>
+                                <td> {{ object.operation }}</td>
+                                <td> {{ object.user }} </td>
+                                <td> {{ object.date }} </td>
+                            {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

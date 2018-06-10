@@ -32,7 +32,6 @@ class HttpRequest(models.Model):
     request_path = models.CharField(max_length=50)
     request_method = models.CharField(max_length=5)
     request_info = models.TextField()
-    request_cookies = models.TextField()
     datetime = models.DateTimeField(auto_now_add=True)
 
 

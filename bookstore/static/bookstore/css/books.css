@@ -1,6 +1,7 @@
 html, body {
     font-family: "Boboto", sans-serif;
     background-color: #eeeef1;
+    height: 100%;
 }
 .navbar-inverse {
     background-color:#2a56c6;
@@ -182,4 +183,21 @@ input[type="checkbox"]:checked + label span.checkbox::after {
     bottom: 1px;
     left: 80px;
     font-weight: bold;
+}
+
+.wrapper {
+    min-height: 97%;
+}
+.wrapper-content{
+    overflow: auto;
+    padding-bottom: 30px;
+}
+.footer {
+    position: relative;
+    margin-top: -25px;
+    height: 50px;
+    padding-top: 15px;
+    background: #f9f9f9;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
 }
