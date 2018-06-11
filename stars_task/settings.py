@@ -125,6 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'bookstore/media')
 MEDIA_URL = '/media/'
+THUMB_SIZE = (400, 265)
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'bookstore/templates'),)

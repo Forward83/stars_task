@@ -166,8 +166,13 @@ input[type="checkbox"]:checked + label span.checkbox::after {
     margin-top:20px;
 }
 
+.book-container{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .book-item {
-    height: 410px;
+    height: 380px;
     background-color: #ffffff;
     border: 1px solid lightgrey;
     position: relative;
@@ -184,7 +189,7 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 #price {
     position: absolute;
     bottom: 1px;
-    left: 80px;
+    left: 30%;
     font-weight: bold;
 }
 

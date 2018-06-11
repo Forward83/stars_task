@@ -8,7 +8,7 @@
             <div class="col-md-10">
             {% include 'bookstore/sort_button.html' %}
                 {% for book in books %}
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 book-container">
                         <div class="book-item">
                             <div>
                                 Published: <time> {{ book.publish_date }}</time>
