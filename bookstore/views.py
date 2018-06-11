@@ -10,7 +10,6 @@ def user_in_staff(user):
 
 
 def book_list(request, order=None):
-    print('Order:', order)
     if order == 'desc':
         books = Book.objects.all().order_by('-publish_date')
     elif order == 'asc':

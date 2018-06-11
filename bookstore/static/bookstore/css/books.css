@@ -172,7 +172,7 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 }
 
 .book-item {
-    height: 380px;
+    height: 350px;
     background-color: #ffffff;
     border: 1px solid lightgrey;
     position: relative;

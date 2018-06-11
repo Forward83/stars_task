@@ -77,6 +77,8 @@ class Book(models.Model):
     def delete(self, using=None, keep_parents=False):
         if self.image:
             default_storage.delete(self.image.name)
+        if self.thumbnail:
+            default_storage.delete(self.thumbnail.name)
 
 class HttpRequest(models.Model):
     request_path = models.CharField(max_length=50)
